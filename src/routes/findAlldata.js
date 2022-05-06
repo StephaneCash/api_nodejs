@@ -22,8 +22,8 @@ module.exports = (app) => {
                     res.json({ msg, data: rows })
                 })
             } else {
-                const msg = "Le terme de recherche doit contenir au minimu deux caractères";
-                res.json({ msg })
+                const msg = "Le terme de recherche doit contenir au minimum deux caractères";
+                return res.status(400).json({ msg })
             }
 
         } else {

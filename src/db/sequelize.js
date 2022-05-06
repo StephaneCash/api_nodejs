@@ -1,5 +1,6 @@
 const { Sequelize, DataTypes } = require('sequelize');
 const PkemonModel = require('../models/pokemon');
+const UserModel = require('../models/user');
 const pokemons = require('./pocekmonList');
 
 const sequelize = new Sequelize(
@@ -15,6 +16,7 @@ const sequelize = new Sequelize(
 )
 
 const Pokemon = PkemonModel(sequelize, DataTypes);
+const User = UserModel(sequelize, DataTypes);
 
 const initDB = () => {
     return sequelize.sync({ force: true })

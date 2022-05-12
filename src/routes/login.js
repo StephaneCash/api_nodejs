@@ -12,7 +12,7 @@ module.exports = (app) => {
             if (!user) {
                 const message = 'L\'utilisateur demandé n\'existe pas';
                 return res.status(400).json({ message })
-            } 
+            }  
             bcrypt.compare(req.body.password, user.password).then(isPasswordValid => {
                 if (!isPasswordValid) {
                     const message = 'Le mot de passe est incorrect';

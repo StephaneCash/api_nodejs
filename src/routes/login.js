@@ -19,9 +19,9 @@ module.exports = (app) => {
                     return res.status(401).json({ message })
                 }
 
-                // Création du jéton
+                // Création du jéton pour chaque user
                 const jeton = jwt.sign(
-                    { userId: user.id },
+                    { userId: user.id }, 
                     primaryKey,
                     { expiresIn: '24' }
                 )

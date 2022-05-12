@@ -29,7 +29,7 @@ module.exports = (app) => {
                 const message = `L'utilisateur a été connecté avec succès`;
                 return res.json({ message, data: user, jeton })
             })   
-        }))
+        })) 
 
             .catch(err => {
                 const message = `L'utilisateur n'a pas pu être connecté`;

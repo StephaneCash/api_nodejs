@@ -25,7 +25,7 @@ module.exports = (app) => {
                     primaryKey,
                     { expiresIn: '24' }
                 )
-
+ 
                 const message = `L'utilisateur a été connecté avec succès`;
                 return res.json({ message, data: user, jeton })
             })

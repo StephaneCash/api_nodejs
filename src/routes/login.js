@@ -35,5 +35,5 @@ module.exports = (app) => {
                 const message = `L'utilisateur n'a pas pu être connecté`;
                 return res.json({ message, data: err })
             })
-    })
+    }) 
 }   

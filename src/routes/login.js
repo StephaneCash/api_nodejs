@@ -2,7 +2,7 @@ const { User } = require('../db/sequelize');
 const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken');
 const primaryKey = require('../auth/private_key');
-
+ 
 module.exports = (app) => {
     app.post('/api/login', (req, res) => {
         User.findOne({

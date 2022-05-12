@@ -18,7 +18,7 @@ module.exports = (app) => {
                     const message = 'Le mot de passe est incorrect';
                     return res.status(401).json({ message })
                 }  
- 
+  
                 // Création du jéton pour chaque user avec jwt
                 const jeton = jwt.sign(
                     { userId: user.id },

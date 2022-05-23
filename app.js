@@ -1,10 +1,10 @@
-const express = require("express"); 
+const express = require("express");
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
 const sequelize = require('./src/db/sequelize');
 
 const app = express();
-const port = 3001;
+const port = process.env.PORT || 3001;
 
 app.use(morgan('dev'))
     .use(bodyParser.json())
@@ -20,7 +20,7 @@ require('./src/routes/login')(app);
 
 // Gestion des erreurs 404
 
-app.use(({res})=>{
+app.use(({ res }) => {
     const message = "Impossible de trouver la ressouce demandée.";
     res.status(404).json(message)
 })
